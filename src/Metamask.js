@@ -28,6 +28,8 @@ const Metamask = ({metamaskpagestatus}) => {
                 })
         }
         else {
+            alert("Please Install Metamask First\nIf you are using a mobile you can't do it\nIf you are using pc then add metamask wallet extension");
+
             setErrorMessage("Install Metamask please")
         }
     }
