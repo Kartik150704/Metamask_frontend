@@ -1,0 +1,134 @@
+.navbar {
+    background-color:#222222 ;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .menu-icon-line {
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 4px;
+    transition: transform 0.3s;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-button {
+    font-size: large;
+    background-color: #222222;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .navbar-button:hover
+  {
+    color: black;
+    background-color: white;
+    transform: scale(1);
+    transition-duration: 0.4s;
+  }
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: calc(100vh - 60px);
+    transition: opacity 0.3s, visibility 0.3s linear 0.3s, transform 0.3s;
+  }
+  
+  .navbar-menu.open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s, visibility 0s linear, transform 50s;
+  }
+  
+  .navbar-menu.open .navbar-button {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s, visibility 0s linear, transform 0.5s;
+  }
+  .navbar-menu.open .navbar-button:hover {
+    color: black;
+    background-color: white;
+    transform: scale(1);
+    transition-duration: 0.4s;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar-right {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .menu-icon.open .menu-icon-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      
+    }
+  
+    .menu-icon.open .menu-icon-line:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .menu-icon.open .menu-icon-line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+  
+    .navbar-menu {
+      
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: ease 5s;
+      
+    }
+  
+    .navbar-menu.open {
+        
+        
+        transition: transform 5s;
+        
+    }
+  }
+  

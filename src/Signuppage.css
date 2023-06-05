@@ -1,0 +1,85 @@
+.signup-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+  
+  .signup-box {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height:65vh;
+    padding: 50px;
+    background-color: #d1d3d7;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+   
+  }
+  
+  .signup-heading {
+    margin-top: 8vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  input[type='email'],
+  input[type='password'] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .signup-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color:rgb(227, 116, 19);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .signup-button:hover {
+    transform: scale(1.1);
+    transition-duration: 0.4s;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .secondary-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    color: rgb(227, 116, 19);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .secondary-button:hover {
+    color: white;
+    background-color:  rgb(227, 116, 19);
+  }
+  

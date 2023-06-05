@@ -1,25 +1,76 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch,Routes ,Route} from 'react-router-dom';
+import axios from 'axios';
+import Login from './Login';
+import Signup from './Signup';
+import Metamask from './Metamask';  // Add this line
+import './App.css'
+import Home from './Homeup';
+import Design from './Design';
+import Homeup from './Homeup';
+import Homemid from './Homemid';
+import Homebottom from './Homebottom';
+import { ChakraProvider } from '@chakra-ui/react';
+import './Design.css'
+import CreditPage from './CreditPage';
 
-function App() {
+const App = () => {
+  
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [pagestatus, setpagestatus]=useState("home");
+    const [registered,setregistered]=useState(false);
+    const handleLoginStatus = (status) => {
+      setIsLoggedIn(status);
+    };
+
+
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+    {/* <Signup signedupstatus={hadlesignupstatus}/>
+    {issignedup==1?<Metamask/>:<p>Error</p>} */}
+    {/* <Signup/> */}
+    {/* {pagestatus=="home" && <Homeup homepagestatus={setpagestatus}/>}
+    {pagestatus=="login" && < Login loginpagestatus={setpagestatus}/>}
+    {pagestatus=="signup" && <Signup signpagestatus={setpagestatus}/>}
+    {pagestatus=="metamask" && <Metamask metamaskpagestatus={setpagestatus}/>} */}
+    
+    <Router>
+      <Routes>
+      <Route exact path="/home" element={
+        <div>
+          <Homeup/>
+          <Homemid/>
+          <Homebottom/>
+        </div>
+      } />
+      <Route exact path="" element={
+        <div>
+          <Homeup/>
+          <Homemid/>
+          <Homebottom/>
+        </div>
+      } />
+      <Route exact path="/signup" element={<Signup signpagestatus={setpagestatus}/>} />
+      <Route exact path="/login" element={<Login loginpagestatus={setpagestatus}/>} />
+      <Route exact path="/credit" element={<CreditPage/>} /> 
+      <Route exact path="/metamask" Component={Metamask}/>
+      
+
+      </Routes>
+    </Router>
+     
+      
+    
+    
+    
+
+    
+
+  </div>
+
   );
-}
+};
 
 export default App;
