@@ -29,7 +29,7 @@ const CreditPage = () => {
         <p className="credit-details">Developed by: Mohit Chaudhary and Kartik Yadav</p>
       </div>
       <div className="home-button-container">
-        <Button className='home-button' onClick={()=>navigate('/home')} >Home</Button>
+        <button className='home-button' onClick={()=>navigate('/home')} >Home</button>
       </div>
     </div>
   );
