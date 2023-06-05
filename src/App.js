@@ -10,7 +10,7 @@ import Design from './Design';
 import Homeup from './Homeup';
 import Homemid from './Homemid';
 import Homebottom from './Homebottom';
-import { ChakraProvider } from '@chakra-ui/react';
+
 import './Design.css'
 import CreditPage from './CreditPage';
 
