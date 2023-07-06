@@ -22,7 +22,7 @@ const Signup = ({ signpagestatus }) => {
     }
     console.log(data);
     var present = 0;
-    let s = "https://metamask-backend.onrender.com/read/" + email;
+    let s = "https://panicky-fish-hoodie.cyclic.app/read/" + email;
     fetch(s)
       .then((response) => {
 
@@ -32,7 +32,7 @@ const Signup = ({ signpagestatus }) => {
               console.log(res.status);
               if (res.status != "present") {
                 present = 1;
-                fetch('https://metamask-backend.onrender.com/create', {
+                fetch('https://panicky-fish-hoodie.cyclic.app/create', {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json'
