@@ -17,7 +17,7 @@ const Login = ({ loginpagestatus }) => {
   }
   const handleLogin = (e) => {
     e.preventDefault();
-    let s = "https://metamask-backend.onrender.com/check/" + email + "/" + password;
+    let s = "https://panicky-fish-hoodie.cyclic.app/check/" + email + "/" + password;
     fetch(s)
       .then((resp) => {
         resp.json()
