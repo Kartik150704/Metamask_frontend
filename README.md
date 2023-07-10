@@ -20,11 +20,6 @@ https://github.com/Kartik150704/Metamask_frontend/assets/108309065/b4d91817-7249
 ## Website Link
 https://metamask-frontend-pearl.vercel.app/
 
-## Getting Started
 
-Follow these steps to get started with the Metamask project:
 
-1. Clone the repository:
 
-```shell
-git clone https://github.com/your-username/metamask-project.git
